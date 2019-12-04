@@ -13,19 +13,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - name: "Build & test"
-        run: |
-          yarn
-          yarn build
-          yarn lint
-          yarn test
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
-          files: |
-            LICENSE.txt
-            *.jar
