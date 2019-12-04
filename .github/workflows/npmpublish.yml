@@ -11,36 +11,29 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
+          registry-url: https://registry.npmjs.org
+
       - run: yarn
       - run: yarn build
       - run: yarn lint
       - run: yarn test
 
-  # PUBLISH Public package to npm
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - name: Publish to npmjs.org
+        uses: actions/setup-node@v1
         with:
           node-version: 12
-          registry-url: https://registry.npmjs.org/
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-  # PUBLISH Private package to Github registry
-#   publish-gpr:
-#     needs: build
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v1
-#       - uses: actions/setup-node@v1
-#         with:
-#           node-version: 12
-#           registry-url: https://npm.pkg.github.com/
-#           scope: '@your-github-username'
-#       - run: npm ci
-#       - run: npm publish
-#         env:
-#           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+# PUBLISH Private package to Github registry
+      # - uses: actions/checkout@v1
+      # - name: Publish to Github registry
+      #   uses: actions/setup-node@v1
+      #   with:
+      #     node-version: 12
+      #     registry-url: https://npm.pkg.github.com/
+      #     scope: '@your-github-username'
+      # - run: npm publish
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
