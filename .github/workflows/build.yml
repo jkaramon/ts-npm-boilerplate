@@ -1,5 +1,8 @@
-name: Build on push to any branch
-on: [push]
+name: Build on push to feature branch
+on: 
+  push:
+    branches-ignore:
+      - master
 jobs:
   build:
     name: Test
