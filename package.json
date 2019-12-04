@@ -1,6 +1,6 @@
 {
   "name": "@nextinq/ts-npm-boilerplate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Typescript npm package boilerplate",
   "main": "lib/index.js",
   "files": [
