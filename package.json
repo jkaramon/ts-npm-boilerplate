@@ -1,5 +1,5 @@
 {
-  "name": "ts-npm-boilerplate",
+  "name": "@nextinq/ts-npm-boilerplate",
   "version": "0.0.1",
   "description": "Typescript npm package boilerplate",
   "main": "lib/index.js",
@@ -11,14 +11,13 @@
   "license": "MIT",
   "scripts": {
     "bump": "npm version patch && git push",
-    "publish": "npm publish",
+    "publish:npm": "npm publish --access public",
     "clean": "rimraf lib",
     "test": "yarn jest src",
     "test:watch": "yarn jest src --watch",
     "lint": "yarn eslint 'src/{**/*,*}.ts*'",
     "build": "yarn clean && yarn tsc",
     "format": "prettier --single-quote --arrow-parens always --write 'src/{**/*,*}.ts*'",
-    "prepublishOnly": "yarn clean && yarn lint && yarn test && yarn build",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "engines": {
