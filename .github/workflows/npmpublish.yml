@@ -1,9 +1,8 @@
-name: Publish npm package
-
+name: Publish npm package on master branch push
 on:
   push:
-    tags:
-      - "*"
+    branches:    
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
