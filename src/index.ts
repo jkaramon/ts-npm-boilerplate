@@ -1,1 +1,1 @@
-export const someConst = '';
+export const someConst = 'ts-npm-boilerplate';
