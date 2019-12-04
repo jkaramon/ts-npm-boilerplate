@@ -1,6 +1,3 @@
-[![Build Status](https://travis-ci.org/nextinq/ts-npm-boilerplate.svg?branch=master)](https://travis-ci.org/nextinq/ts-npm-boilerplate)
-[![Coverage Status](https://coveralls.io/repos/github/nextinq/ts-npm-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/nextinq/ts-npm-boilerplate?branch=master)
-
 # ts-npm-boilerplate
 
 Typescript npm boileplate
