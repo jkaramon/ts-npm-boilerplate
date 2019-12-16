@@ -1,10 +1,11 @@
 {
   "name": "@nextinq/ts-npm-boilerplate",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Typescript npm package boilerplate",
   "main": "lib/index.js",
   "files": [
-    "lib/**"
+    "lib/**",
+    "src/**"
   ],
   "repository": "git@github.com:jkaramon/uts-npm-boilerplate",
   "author": "Josef Karamon <josef.karamon@gmail.com>",
