@@ -1,7 +1,7 @@
 name: Publish npm package on master branch push
 on:
   push:
-    branches:    
+    branches:
       - master
 jobs:
   build:
@@ -25,15 +25,14 @@ jobs:
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-
 # PUBLISH Private package to Github registry
-      # - uses: actions/checkout@v1
-      # - name: Publish to Github registry
-      #   uses: actions/setup-node@v1
-      #   with:
-      #     node-version: 12
-      #     registry-url: https://npm.pkg.github.com/
-      #     scope: '@your-github-username'
-      # - run: npm publish
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{secrets.github_token}}
+# - uses: actions/checkout@v1
+# - name: Publish to Github registry
+#   uses: actions/setup-node@v1
+#   with:
+#     node-version: 12
+#     registry-url: https://npm.pkg.github.com/
+#     scope: '@your-github-username'
+# - run: npm publish
+#   env:
+#     NODE_AUTH_TOKEN: ${{secrets.github_token}}
